@@ -11,11 +11,11 @@ void setup()
 
 void loop()
 {
-	int CommandByte;
-
-  /* add main program code here */
+	/* add main program code here */
 	if (Serial.available() > 0){
-		CommandByte=Serial.read();
+		brightness=Serial.read();
+    //Serial.print("Brightness "); //Uncomment these lines for debugging
+    //Serial.println(brightness);
 		analogWrite(led1, brightness);
 		delay(50);
 	}
